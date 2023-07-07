@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.hasanaltunbay.notlarmapp.mvvm.NotlarViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.KaydetFragment"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:text="@={viewModel.inputBaslik}"
+            android:maxLines="1"
+            android:background="#93A3DC"
+            android:ems="10"
+            android:inputType="text"
+            android:id="@+id/Baslik"
+            android:hint="Baslik Giriniz" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:background="#93A3DC"
+            android:textColorHint="@color/white"
+            android:text="@={viewModel.inputAltBaslik}"
+            android:maxLines="1"
+            android:ems="10"
+            android:id="@+id/altBaslik"
+            android:hint="Alt Baslik Giriniz"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/notGir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#93A3DC"
+            android:gravity="start"
+            android:hint="Notu Giriniz"
+            android:text="@={viewModel.inputNotGir}"
+            android:lines="15"
+            android:padding="10dp"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/buttonKaydet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kaydet"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</layout>

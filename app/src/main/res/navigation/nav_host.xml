@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/anaFragment">
+
+    <fragment
+        android:id="@+id/anaFragment"
+        android:name="com.hasanaltunbay.notlarmapp.ui.AnaFragment"
+        android:label="AnaFragment" >
+        <action
+            android:id="@+id/action_anaFragment_to_duzenleFragment"
+            app:destination="@id/duzenleFragment" />
+        <action
+            android:id="@+id/action_anaFragment_to_kaydetFragment"
+            app:destination="@id/kaydetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/duzenleFragment"
+        android:name="com.hasanaltunbay.notlarmapp.ui.DuzenleFragment"
+        android:label="DuzenleFragment" >
+        <action
+            android:id="@+id/action_duzenleFragment_to_anaFragment"
+            app:destination="@id/anaFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/anaFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/kaydetFragment"
+        android:name="com.hasanaltunbay.notlarmapp.ui.KaydetFragment"
+        android:label="KaydetFragment" >
+        <action
+            android:id="@+id/action_kaydetFragment_to_anaFragment"
+            app:destination="@id/anaFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/anaFragment"/>
+    </fragment>
+</navigation>
